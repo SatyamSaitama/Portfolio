@@ -1,17 +1,492 @@
 <!DOCTYPE html>
-<html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+<html lang="en" >
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="favicon.ico" rel="icon">
+  <link href="./Web/icons8-satoru-gojo-doodle-120.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+
+<body >
+
+  
+ 
+  <header id="header" class="d-flex flex-column justify-content-center">
+
+    <nav id="navbar" class="navbar nav-menu">
+      <ul>
+       
+
+        <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+        <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+        <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+        <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+      
+        <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+      </ul>
+    </nav><!-- .nav-menu -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center">
+    <div class="container" data-aos="zoom-in" data-aos-delay="100">
+      <h1>Satyam Kumar</h1>
+      <p>I'm <span class="typed" data-typed-items=" Web Developer,ML Engineer, Web designer"></span></p>
+      <div class="social-links">
+        <a href="https://www.instagram.com/satyamsaitama9/" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://github.com/SatyamSaitama" class="google-plus"><i class="bx bxl-github"></i></a>
+        <a href="https://www.linkedin.com/in/satyamkiitm/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container mt-5">
+        <div class="row">
+          <div class="card" id="aboutSection">
+            <div class="card-body">
+                <p>🚀 Currently pursuing a Data Science degree at IIT Madras! My tech journey is a thrilling adventure of problem-solving and continuous learning.</p>
+                <p>💻 Passionate about programming and data science, I love tackling complex challenges and bringing ideas to life through innovative projects.</p>
+                <p>🔍 Dedicated to expanding my knowledge and applying it to real-world scenarios. My projects showcase a commitment to staying on the cutting edge of technology.</p>
+                <p>📊 I believe in the power of data to drive insights and decisions. Excited about creating solutions that make a positive impact!</p>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    </section><!-- End About Section -->
+
+
+    <!-- ======= Skills Section ======= -->
+   <!-- Include Font Awesome CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-">
+
+<section id="skills" class="skills section-bg">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Skills</h2>
+        </div>
+
+        <div class="row skills-content">
+
+            <div class="col-lg-6">
+
+                <div class="progress">
+                    <span class="skill"><i class="fab fa-html5" style="color: #e44d26;"></i> HTML <i class="val">100%</i></span>
+                    <div class="progress-bar-wrap">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+
+                <div class="progress">
+                    <span class="skill"><i class="fab fa-css3-alt" style="color: #2965f1;"></i> CSS <i class="val">90%</i></span>
+                    <div class="progress-bar-wrap">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+
+                <div class="progress">
+                    <span class="skill"><i class="fab fa-js" style="color: #f0db4f;"></i> JavaScript <i class="val">80%</i></span>
+                    <div class="progress-bar-wrap">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="progress">
+                    <span class="skill"><i class="fab fa-python" style="color: #306998;"></i> Python <i class="val">90%</i></span>
+                    <div class="progress-bar-wrap">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+
+                <div class="progress">
+                    <span class="skill"><i class="fab fa-vuejs" style="color: #42b883;"></i> Vue <i class="val">90%</i></span>
+                    <div class="progress-bar-wrap">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+
+                <div class="progress">
+                    <span class="skill"><i class="fa-solid fa-flask" style="color: #4a64c9;"></i> Flask <i class="val">99%</i></span>
+                    <div class="progress-bar-wrap">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- End Skills Section -->
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Resume</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <h3 class="resume-title">Sumary</h3>
+            <div class="resume-item pb-0">
+              <h4>Satyam Kumar</h4>
+              <p>
+              I am currently pursuing my Bachelor's degree in Data Science from IIT Madras. My journey in the world of technology has been an exciting exploration of problem-solving and continuous learning.
+              </p>
+              <ul>
+                <li>Patna,Bihar</li>
+                <li>8434202404</li>
+                <li>Satyam.Kumar@gmail.com</li>
+              </ul>
+            </div>
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Bachelor's of Scince in Programming &amp; Datascience</h4>
+              <h5>2021 - 2025</h5>
+              <p style="font-weight:800">   IIT Madras, Chennai, Tamil Nadu
+              </em></p>
+              <p>
+              I am currently pursuing my Bachelor's degree in Data Science from IIT Madras. My journey in the world of technology has been an exciting exploration of problem-solving and continuous learning.
+              </p>
+            </div>
+            <div class="resume-item">
+              <h4>Bachelor of Computer Application</h4>
+              <h5>2020 - 2023</h5>
+              <p style="font-weight:800">Anugrah Narayan College, Patna, Bihar</p>
+              <p>
+              I have completed my Bachelor of Computer Application from Anugrah Narayan College,Patna,Bihar. I have learned the fundamentals of programming and data science. I have also done some online courses to learn new technologies and frameworks.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h3 class="resume-title">Professional Experience</h3>
+            <div class="resume-item">
+              <h4>Project Mentor</h4>
+              <h5>Sept'23 - Dec'23</h5>
+              <p style="font-weight:800"></p>IIT Madras</p>
+              <ul>
+                <li>
+                I worked as a project mentor at IIT Madras. I was responsible for guiding students in their projects and helping them in their projects.
+                </li>
+                <li>
+                 Students are from different background and varied age groups. I had to  make sure that they are able to understand the concepts and implement them in their projects.
+                   </li>
+                <li>
+                  I helped students to get S grade in their projects.
+                </li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>TicketShow(Project)</h4>
+              <p><em>
+              TicketShow is a web application which is used to book tickets for movies,concerts and events. It is developed using HTML,CSS,JavaScript,Vue and Flask.
+              </em></p>
+              <ul>
+                <li>Developed the project using HTML,CSS,JavaScript,Vue and Flask</li>
+                </li>
+                <li>
+                Implemented the backend using Flask and Sqlite
+                </li>
+                <li>
+                Implemented the frontend using HTML,CSS,Vue and JavaScript
+                </li>
+               
+              </ul>
+            </div>
+            <div class="resume-item">
+              <a href="./Resume.pdf" class="btn btn-success text-right" download>
+                <i class="fas fa-download" style="color:rgb(249, 238, 238)"></i> Resume
+              </a>
+              
+                  
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+    </section><!-- End Resume Section -->
+  
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Portfolio</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">Devlopment</li>
+              <li data-filter=".filter-card">Data Science</li>
+              <li data-filter=".filter-web">Business</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/_777defbb-1d46-44bb-98aa-3da04534746f.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Resonance</h4>
+                <p>Voice analyzer</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/_777defbb-1d46-44bb-98aa-3da04534746f.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Voice analyzer"><i class="bx bx-info-circle"></i></a>
+                  <a href="https://resonance-sigma.vercel.app/" class="portfolio-details-lightbox" data-glightbox="type: external" title="Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/android-chrome-512x512.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>TicketShow</h4>
+                <p>V2</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/Screenshot 2024-01-12 192927.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Booking Site"><i class="bx bx-info-circle"></i></a>
+                  <a href="https://ticketshow-v2.vercel.app/" class="portfolio-details-lightbox" data-glightbox="type: external" title="Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/Screenshot 2024-01-12 194433.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Capstone Project</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/Screenshot 2024-01-12 194433.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-info-circle"></i></a>
+                  <a href="./MidTerm.pdf" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/_463fa979-c3ee-4055-a648-28a7f0f461b0.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>WinGPT</h4>
+                <p>Assitant</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/_463fa979-c3ee-4055-a648-28a7f0f461b0.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-info-circle"></i></a>
+                  <a href="https://github.com/SatyamSaitama/WinGpt" " title="github repo"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/_f450dd03-1e81-4758-9c5e-e9927addf75e.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Adopt More Trees</h4>
+                <p>Adopt More Trees</p>
+                <div class="portfolio-links">
+                  <a href="https://th.bing.com/th/id/OIP.cBqmxUtAmnQMwr1BcJ9VggHaHa?w=169&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Adopt More trees"><i class="bx bx-plus"></i></a>
+                  <a href="https://th.bing.com/th/id/OIP.cBqmxUtAmnQMwr1BcJ9VggHaHa?w=169&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" class="portfolio-details-lightbox" data-glightbox="type: external" title="Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/favicon.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>MLP</h4>
+                <p>Prediction</p>
+                <div class="portfolio-links">
+                  <a href="https://developers.google.com/static/machine-learning/images/intro-with-1_720.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="MLP"><i class="bx bx-plus"></i></a>
+                  <a href="https://developers.google.com/static/machine-learning/images/intro-with-1_720.png" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 1</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 3</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div> -->
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Services Section ======= -->
+    <!-- End Services Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <!-- End testimonial item -->
+
+            <!-- End testimonial item -->
+
+            
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+        </div>
+
+        <div class="row mt-1">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Patna,Bihar</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>satyam.k.dev@gmail.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+91 8434 2024 04</p>
+              </div>
+             
+            </div>
+
+          </div>
+          <div class="col"><img src="https://media3.giphy.com/media/mccqgX9t6f0EIuWTZh/giphy.gif?cid=ecf05e47rzaoj2cb7g10y7wlzn3sjfhm5aasx22fbbvy23g7&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="" srcset=""></div>
+
+          
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="social-links">
+       
+        <a href="https://www.instagram.com/satyamsaitama9/" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://github.com/SatyamSaitama" class="google-plus"><i class="bx bxl-github"></i></a>
+        <a href="https://www.linkedin.com/in/satyamkiitm/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+      <div class="copyright">
+        &copy; Copyright <strong><span>Satyam Kumar</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <script>
+    function toggle(){
+      element = document.getElementById('hero')
+    }
+  </script>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
 </html>
