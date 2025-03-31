@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stoic Mastery Suite</title>
+    <style>
+        :root {
+            --primary: #2A4365;
+            --secondary: #4299E1;
+            --accent: #48BB78;
+            --dark: #1A202C;
+            --light: #F7FAFC;
+            --highlight: #EBF8FF;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            min-height: 90vh;
+            position: relative;
+        }
+
+        .emergency-bar {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+
+        h1, h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: transform 0.2s;
+        }
+
+        .checkbox-group {
+            margin: 15px 0;
+        }
+
+        .streak-counter {
+            font-size: 1.2em;
+            color: var(--secondary);
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            position: sticky;
+            bottom: 20px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .quote-card {
+            background: var(--light);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1rem 0;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .emotion-tracker {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin: 1rem 0;
+        }
+
+        .emotion-btn {
+            padding: 0.5rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .emotion-btn.selected {
+            border-color: var(--accent);
+            background: var(--highlight);
+        }
+
+        .breathing-widget {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: var(--secondary);
+            margin: 2rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            animation: pulse 8s infinite;
+            cursor: pointer;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .control-matrix {
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        .control-matrix td {
+            padding: 10px;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        @media (max-width: 480px) {
+            .section {
+                padding: 15px;
+                min-height: 90vh;
+            }
+            
+            .emotion-tracker {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Emergency Stoic Recall -->
+        <div class="emergency-bar">
+            <button class="breathing-widget" style="width: 50px; height: 50px; animation: none;" 
+                    onclick="showEmergencyTools()">⚡</button>
+        </div>
+
+        <!-- Morning Section -->
+        <div class="section" id="morning-section">
+            <h1>🌅 Morning Armor</h1>
+            <div class="streak-counter">Current Streak: <span id="streak">0</span> days</div>
+            <p id="date-display"></p>
+            
+            <h3>🛡️ Three Emotional Shields (Gratitude)</h3>
+            <input type="text" id="grateful1" placeholder="First gratitude">
+            <input type="text" id="grateful2" placeholder="Second gratitude">
+            <input type="text" id="grateful3" placeholder="Third gratitude">
+
+            <h3>⚔️ Today's Battle Plan</h3>
+            <textarea id="intention" placeholder="My Stoic intention for today..." rows="3"></textarea>
+
+            <h3>🎯 Anticipate Challenges</h3>
+            <textarea id="challenges" placeholder="Potential emotional triggers" rows="2"></textarea>
+
+            <div class="nav-buttons">
+                <button onclick="showSection('practice-section')">Next ➔</button>
+            </div>
+        </div>
+
+        <!-- Daily Practice Section -->
+        <div class="section hidden" id="practice-section">
+            <h1>🛠️ Daily Training</h1>
+            
+            <div class="checkbox-group">
+                <label><input type="checkbox"> Practice Memento Mori (5min)</label><br>
+                <label><input type="checkbox"> Cold exposure practice</label><br>
+                <label><input type="checkbox"> Read Stoic passage</label>
+            </div>
+
+            <div class="dashboard">
+                <div class="quote-card">
+                    <h4>🧘 Breathing Exercise</h4>
+                    <div class="breathing-widget" onclick="startBreathing()">
+                        Tap to Start
+                    </div>
+                </div>
+                
+                <div class="quote-card">
+                    <h4>😌 Current Emotion</h4>
+                    <div class="emotion-tracker">
+                        <button class="emotion-btn" data-emotion="calm">😌 Calm</button>
+                        <button class="emotion-btn" data-emotion="frustrated">😤 Frustrated</button>
+                        <button class="emotion-btn" data-emotion="anxious">😰 Anxious</button>
+                        <button class="emotion-btn" data-emotion="joyful">😄 Joyful</button>
+                        <button class="emotion-btn" data-emotion="angry">😠 Angry</button>
+                        <button class="emotion-btn" data-emotion="neutral">😐 Neutral</button>
+                    </div>
+                </div>
+            </div>
+
+            <h3>🎯 Control Matrix</h3>
+            <table class="control-matrix">
+                <tr>
+                    <th>Within My Control</th>
+                    <th>Outside My Control</th>
+                </tr>
+                <tr>
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+            </table>
+
+            <div class="nav-buttons">
+                <button onclick="showSection('morning-section')">← Back</button>
+                <button onclick="showSection('evening-section')">Next ➔</button>
+            </div>
+        </div>
+
+        <!-- Evening Section -->
+        <div class="section hidden" id="evening-section">
+            <h1>🌌 Evening Review</h1>
+            
+            <h3>🔥 Trials Overcome</h3>
+            <textarea rows="3" placeholder="Where I maintained control"></textarea>
+            
+            <h3>💔 Armor Dents</h3>
+            <textarea rows="3" placeholder="Where emotions overrode reason"></textarea>
+
+            <h3>⚡ Tomorrow's Edge</h3>
+            <textarea rows="2" placeholder="Improvement plan"></textarea>
+
+            <div class="streak-counter">
+                Current Streak: <span id="streak-evening">0</span> days
+            </div>
+
+            <div class="nav-buttons">
+                <button onclick="showSection('practice-section')">← Back</button>
+                <button onclick="saveDay()">Complete Day</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize date
+        const today = new Date();
+        document.getElementById('date-display').textContent = today.toLocaleDateString('en-US', {
+            weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+        });
+
+        // Navigation logic
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.add('hidden');
+            });
+            document.getElementById(sectionId).classList.remove('hidden');
+            window.scrollTo(0, 0);
+        }
+
+        // Streak management
+        let streak = localStorage.getItem('stoicStreak') || 0;
+        document.getElementById('streak').textContent = streak;
+        document.getElementById('streak-evening').textContent = streak;
+
+        function saveDay() {
+            const lastCompleted = localStorage.getItem('lastCompleted');
+            const todayStr = today.toISOString().split('T')[0];
+            
+            if (lastCompleted !== todayStr) {
+                streak = lastCompleted && 
+                    new Date(lastCompleted).getTime() === today.getTime() - 86400000 ? 
+                    streak + 1 : 1;
+                localStorage.setItem('stoicStreak', streak);
+                localStorage.setItem('lastCompleted', todayStr);
+                document.getElementById('streak').textContent = streak;
+                document.getElementById('streak-evening').textContent = streak;
+            }
+            
+            alert('Day completed! Keep building your resilience 💪');
+            showSection('morning-section');
+            clearInputs();
+        }
+
+        // Breathing exercise
+        function startBreathing() {
+            const widget = document.querySelector('.breathing-widget');
+            widget.innerHTML = "🌀 Breathe In<br>4...";
+            setTimeout(() => { widget.innerHTML = "⏳ Hold<br>7..."; }, 4000);
+            setTimeout(() => { widget.innerHTML = "🌬️ Breathe Out<br>8..."; }, 11000);
+            setTimeout(() => { widget.innerHTML = "🧘<br>Complete"; }, 19000);
+        }
+
+        // Emotion tracking
+        document.querySelectorAll('.emotion-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.emotion-btn').forEach(b => b.classList.remove('selected'));
+                this.classList.add('selected');
+                const emotion = this.dataset.emotion;
+                localStorage.setItem('currentEmotion', emotion);
+            });
+        });
+
+        // Emergency tools
+        function showEmergencyTools() {
+            const quotes = [
+                "You have power over your mind - not outside events. Realize this, and you will find strength. - Marcus Aurelius",
+                "The best revenge is not to be like your enemy. - Marcus Aurelius",
+                "Difficulties strengthen the mind, as labor does the body. - Seneca"
+            ];
+            alert(quotes[Math.floor(Math.random() * quotes.length)] + "\n\n🌀 Now breathe deeply for 5 counts...");
+        }
+
+        // Clear inputs
+        function clearInputs() {
+            document.querySelectorAll('input, textarea').forEach(input => {
+                if (!input.closest('.checkbox-group')) input.value = '';
+            });
+            localStorage.removeItem('gratitudeEntries');
+        }
+
+        // Load saved data
+        window.addEventListener('load', () => {
+            const savedEntries = JSON.parse(localStorage.getItem('gratitudeEntries') || '{}');
+            document.getElementById('grateful1').value = savedEntries.grateful1 || '';
+            document.getElementById('grateful2').value = savedEntries.grateful2 || '';
+            document.getElementById('grateful3').value = savedEntries.grateful3 || '';
+        });
+    </script>
+</body>
+</html>
